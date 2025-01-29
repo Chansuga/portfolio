@@ -5,3 +5,6 @@ def home(request):
 
 def profile(request):
     return render(request, 'main/profile.html')
+
+def career(request):
+    return render(request, 'main/career.html')
