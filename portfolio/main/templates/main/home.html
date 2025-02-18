@@ -1,43 +1,16 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ホーム</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .links {
-            text-align: center;
-        }
-        .links a {
-            display: block;
-            margin: 10px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .links a:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <h1>須賀勇貴のポートフォリオ</h1>
-    <div class="links">
-        <a href="{% url 'profile' %}">プロフィールページへ</a>
-        <a href="{% url 'career' %}">経歴ページへ</a>
-    </div>
-</body>
-</html>
+{% extends 'main/base.html' %}
+
+{% block title %}須賀勇貴のポートフォリオ{% endblock %}
+
+{% block content %}
+<section class="intro">
+    <h2>ようこそ！</h2>
+    <p>AIエンジニア須賀勇貴のポートフォリオへようこそ。</p>
+    <p>こちらでは、私のプロフィールと経歴をご紹介します。</p>
+</section>
+
+<section class="cta">
+    <a href="{% url 'profile' %}" class="button">プロフィールを見る</a>
+    <a href="{% url 'career' %}" class="button">経歴を見る</a>
+</section>
+{% endblock %}

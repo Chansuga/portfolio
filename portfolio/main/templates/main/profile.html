@@ -1,48 +1,15 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロフィール</title>
-    {% load static %}
-    <!-- <link rel="stylesheet" href="{% static 'main/style.css' %}"> -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .profile-img {
-            display: block;
-            margin: 0 auto;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-        .info {
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <h1>プロフィール</h1>
-    
-    <!-- 画像の位置を変更（プロフィール文字の上に表示） -->
+{% extends 'main/base.html' %}
+
+{% block title %}プロフィール{% endblock %}
+
+{% block content %}
+<section class="profile">
     <img class="profile-img" src="/media/profile_pics/test.jpeg" alt="プロフィール画像">
-    
-    <div class="info">
-        <h2>名前: 須賀 勇貴</h2>
-        <p>職業: AIエンジニア</p>
-        <p>スキル: Python, AWS</p>
-        <p>趣味: ポケモンカードゲーム, プログラミング, カフェ勉強</p>
-    </div>
-    
-    <p><a href="/">ホームに戻る</a></p>
-</body>
-</html>
+    <h2>須賀 勇貴</h2>
+    <p>職業: AIエンジニア</p>
+    <p>スキル: Python, AWS</p>
+    <p>趣味: ポケモンカードゲーム, プログラミング, カフェ勉強</p>
+</section>
+
+<p class="back-to-home"><a href="/">ホームに戻る</a></p>
+{% endblock %}

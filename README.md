@@ -1,5 +1,5 @@
 # 仮想環境に入る方法
-. portfolio/bin/activate
+. portfolio_env/bin/activate
 
 # 仮想環境から抜ける方法
 deactivate

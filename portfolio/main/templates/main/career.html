@@ -1,48 +1,16 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>経歴</title>
-    {% load static %}
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-        h1 {
-            text-align: center;
-        }
-        .career-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .career-item {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .career-item:last-child {
-            border-bottom: none;
-        }
-    </style>
-</head>
-<body>
-    <h1>経歴</h1>
+{% extends 'main/base.html' %}
+
+{% block title %}経歴{% endblock %}
+
+{% block content %}
+<section class="career">
+    <h2>経歴</h2>
     <ul class="career-list">
-        <li class="career-item">
-            <strong>2024年4月 - 現在:</strong> IT企業に就職し, AIエンジニアとして働いている
-        </li>
-        <li class="career-item">
-            <strong>2022年4月 - 2024年3月:</strong> 茨城大学大学院理工学研究科量子線科学専攻
-        </li>
-        <li class="career-item">
-            <strong>2018年4月 - 2022年3月:</strong> 茨城大学理学部理学科物理学コース
-        </li>
+        <li><strong>2024年4月 - 現在:</strong> IT企業に就職し、AIエンジニアとして働いている</li>
+        <li><strong>2022年4月 - 2024年3月:</strong> 茨城大学大学院理工学研究科量子線科学専攻</li>
+        <li><strong>2018年4月 - 2022年3月:</strong> 茨城大学理学部理学科物理学コース</li>
     </ul>
-    <p><a href="/">ホームに戻る</a></p>
-</body>
-</html>
+</section>
+
+<p class="back-to-home"><a href="/">ホームに戻る</a></p>
+{% endblock %}
